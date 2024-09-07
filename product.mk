@@ -4,8 +4,6 @@ ifneq (,$(wildcard vendor/certs/releasekey.pk8))
     $(warning Using custom signing keys from vendor/certs/)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
     PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
-else
-    $(warning Not using custom signing keys, play integrity will fail)
 endif
 endif
 
